@@ -6,11 +6,11 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise1Test {
     @Test
-    public void test_gcd(){
-        assertEquals(new Exercise1().gcd(3, 2), 1);
+    public void test_calculateGreatestCommonDivisor(){
+        assertEquals(new Exercise1().calculateGreatestCommonDivisor(8, 0), 8);
     }
     @Test
-    public void test_lcm(){
-        assertEquals(new Exercise1().lcm(3, 2), 6);
+    public void test_calculateLeastCommonMultiple(){
+        assertEquals(new Exercise1().calculateLeastCommonMultiple(15, 25), 75);
     }
 }
