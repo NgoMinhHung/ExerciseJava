@@ -2,8 +2,7 @@ package basics;
 
 public class Exercise1 {
     public  int calculateGreatestCommonDivisor(int x, int y){
-        if(x == 0 && y != 0) return y;
-        if(x != 0 && y == 0) return x;
+        if(x*y == 0) return x+y;
         while(x != y){
             if(x > y) x = x - y;
             else y = y - x; }
