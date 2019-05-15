@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class Exercise1Test {
     @Test
     public void test_calculateGreatestCommonDivisor(){
-        assertEquals(new Exercise1().calculateGreatestCommonDivisor(8, 0), 8);
+        assertEquals(new Exercise1().calculateGreatestCommonDivisor(7, 35), 7);
     }
     @Test
     public void test_calculateLeastCommonMultiple(){
