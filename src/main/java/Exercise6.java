@@ -1,14 +1,23 @@
 public class Exercise6 {
-    public void GPTB2(int a, int b, int c){
-        if(a==0 && b!= 0) System.out.println(c/b);
-        else if(a == 0 && b == 0 && c != 0) System.out.println("vo nghiem");
-        else if(a == 0 &&b == 0 && c == 0) System.out.println("vo so nghiem");
+    public String solveQuadraticEquation(int a, int b, int c){
+        String s = new String();
+        float x,x1,x2;
+        if(a==0 && b!= 0) s += "x= " + (float)-c/b;
+        if(a == 0 && b == 0 && c != 0) s = "vo nghiem";
+        if(a == 0 &&b == 0 && c == 0) s = "vo so nghiem";
         else if(a != 0) {
             int delta = b * b - 4 * a * c;
-            if (delta > 0)
-                System.out.println("x1= " + (float) (-b - Math.sqrt(delta)) / (2 * a) + "x2= " + (float) (-b + Math.sqrt(delta)) / (2 * a));
-            else if (delta == 0) System.out.println("x= " + -b / (2 * a));
-            else System.out.println("vo nghiem");
+            if (delta > 0){
+                x1 = (float)(-b - Math.sqrt(delta)) / (2 * a);
+                x2 = (float)(-b + Math.sqrt(delta)) / (2 * a);
+                s = s + "x1= " + x1 + " " +"x2= " + x2;
+            }
+            if (delta == 0){
+                x = (float)-b/(2*a);
+                s = s + "x= " + x;
+            }
+            if(delta < 0) s = "vo nghiem";
         }
+        return s;
     }
 }
