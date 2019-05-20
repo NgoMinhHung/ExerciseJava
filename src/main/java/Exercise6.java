@@ -2,7 +2,7 @@ public class Exercise6 {
     public String solveQuadraticEquation(int a, int b, int c){
         String s = new String();
         float x,x1,x2;
-        if(a==0 && b!= 0) s += "x= " + (float)-c/b;
+        if(a==0 && b!= 0) s = "x= " + (float)-c/b;
         if(a == 0 && b == 0 && c != 0) s = "vo nghiem";
         if(a == 0 &&b == 0 && c == 0) s = "vo so nghiem";
         else if(a != 0) {
@@ -10,11 +10,11 @@ public class Exercise6 {
             if (delta > 0){
                 x1 = (float)(-b - Math.sqrt(delta)) / (2 * a);
                 x2 = (float)(-b + Math.sqrt(delta)) / (2 * a);
-                s = s + "x1= " + x1 + " " +"x2= " + x2;
+                s ="x1= " + x1 + " " +"x2= " + x2;
             }
             if (delta == 0){
                 x = (float)-b/(2*a);
-                s = s + "x= " + x;
+                s = "x= " + x;
             }
             if(delta < 0) s = "vo nghiem";
         }
