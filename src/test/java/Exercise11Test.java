@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 public class Exercise11Test {
     @Test
-    public void Test_Exercise11(){
-        assertTrue(Math.abs(new Exercise11().calculateInterest(4) - 244.140625) == 0);
+    public void Test_calculateInterest(){
+        assertEquals(new Exercise11().calculateInterest(4),244.140625,0.000001);
     }
 }
