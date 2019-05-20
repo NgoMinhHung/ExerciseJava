@@ -1,5 +1,5 @@
 public class Exercise2 {
-    public int calculateSumOfDigitf(int x){
+    public int calculateSumOfDigits(int x){
         int sum = 0;
         while(x != 0){
             sum = sum + (x % 10);

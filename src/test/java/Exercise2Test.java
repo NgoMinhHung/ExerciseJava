@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise2Test {
     @Test
-    public void Test_calculateSumOfDigitf(){
-        assertEquals(new Exercise2().calculateSumOfDigitf(1234), 10);
+    public void Test_calculateSumOfDigits(){
+        assertEquals(new Exercise2().calculateSumOfDigits(1234), 10);
     }
 }
