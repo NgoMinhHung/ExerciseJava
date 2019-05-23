@@ -4,11 +4,11 @@ public class Exercise6 {
         if(a == 0 && b != 0) {
             s = "x= " + (float) -c/b;
         }
-        if(a == 0 && b == 0 && c != 0){
-            s = "vo nghiem";
-        }
-        if(a == 0 &&b == 0 && c == 0){
-            s = "vo so nghiem";
+        if(a == 0 && b == 0){
+            if(c == 0){
+                s = "vo so nghiem";
+            }
+            else s = "vo nghiem";
         }
         else if(a != 0) {
             int delta = b * b - 4 * a * c;
