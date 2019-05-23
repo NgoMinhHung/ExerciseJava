@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Exercise17 {
     public int countNumber(long n){
         int result = 0;
@@ -19,13 +22,14 @@ public class Exercise17 {
             number += Math.pow(mod,m);
             tmp /= 10;
         }
-        if (number == n) return number == n;
-        else return false;
+
+        return number == n;
     }
-    public String findInteger(long n){
-        String result = "";
+    public List<Integer> findInteger(long n){
+        List<Integer> result = new ArrayList<Integer>();
         for(int i= 10; i < n; i++){
-            if(check(i)) result += i + " ";
+
+            if(check(i)) result.add(i);
         }
         return result;
     }
