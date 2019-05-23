@@ -1,10 +1,10 @@
 public class Exercise14 {
-    public float calculateSquareRootOf2(int a){
-        float result = a;
-        float tmp;
+    public double sqrt(int a){
+        double result = a;
+        double tmp;
         do {
             tmp = result;
-            result = (float) a/(2*result) + (float) result/2;
+            result = a/(2*result) + result/2;
         }while (Math.abs(result - tmp) > 0.0001);
         return result;
     }
