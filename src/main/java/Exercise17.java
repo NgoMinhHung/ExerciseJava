@@ -1,21 +1,25 @@
 public class Exercise17 {
+    public int countNumber(long n){
+        int result = 0;
+        while(n != 0){
+            n/=10;
+            result++;
+        }
+        return result;
+    }
     public boolean check(long n){
         long number = 0;
-        long tmp1 = n;
-        long tmp2 = n;
+        long tmp = n;
         int m = 0;
         //find m
-        while(tmp1 != 0){
-            tmp1/=10;
-            m++;
-        }
+        m = countNumber(n);
         //count number = a^m + b^m +....
-        while(tmp2!=0){
-            long mod = tmp2%10;
+        while(tmp!=0){
+            long mod = tmp%10;
             number += Math.pow(mod,m);
-            tmp2 /= 10;
+            tmp /= 10;
         }
-        if (number == n) return true;
+        if (number == n) return number == n;
         else return false;
     }
     public String findInteger(long n){
