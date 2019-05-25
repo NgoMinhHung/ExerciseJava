@@ -1,11 +1,10 @@
 public class Exercise12 {
-    public long calculateFactorial(int n){
-        return (n < 2)? 1 : n * calculateFactorial(n-1);
-    }
-    public  float calculateExpresstion(int n){
-        float result = 0;
-        for(int i = 0; i <= n; i++){
-            result += (float) 1/calculateFactorial(i);
+    public  double calculateExpresstion(int n){
+        double result = 1;
+        double tmp = 1;
+        for(int i = 1; i <= n; i++){
+            tmp *= (double) 1/i;
+            result += tmp;
         }
         return result;
     }
