@@ -1,15 +1,19 @@
 public class Exercise21 {
-    public int checkFibonacci(int n){
+
+    public int checkFibonacci(int n) {
+
         int result = 0;
-        int A[] = new int[n];
-        A[0] = 1;
-        A[1] = 1;
+        int[] arr = new int[n];
+        arr[0] = 1;
+        arr[1] = 1;
         int i = 1;
-        while (A[i] < n){
+
+        while (arr[i] < n) {
             i++;
-            A[i] = A[i-1] + A[i - 2];
+            arr[i] = arr[i - 1] + arr[i - 2];
             result = i;
         }
+        
         return result;
     }
 }
