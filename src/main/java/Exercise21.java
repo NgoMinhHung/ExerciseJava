@@ -8,7 +8,7 @@ public class Exercise21 {
         arr[1] = 1;
         int i = 1;
 
-        while (arr[i] < n) {
+        while (arr[i] <= n) {
             i++;
             arr[i] = arr[i - 1] + arr[i - 2];
             result = i;
