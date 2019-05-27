@@ -13,7 +13,7 @@ public class Exercise21 {
             arr[i] = arr[i - 1] + arr[i - 2];
             result = i;
         }
-        
+
         return result;
     }
 }
