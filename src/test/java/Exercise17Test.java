@@ -10,4 +10,11 @@ public class Exercise17Test {
         assertEquals(new Exercise17().countNumber(371),3);
         assertEquals(new Exercise17().check(407),true);
     }
+    public  void Test_check(){
+        assertEquals(new Exercise17().check(370), true);
+        assertEquals(new Exercise17().check(371), true);
+    }
+    public void Test_countNumber(){
+        assertEquals(new Exercise17().countNumber(407),3);
+    }
 }

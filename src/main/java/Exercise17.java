@@ -13,9 +13,8 @@ public class Exercise17 {
     public boolean check(long n){
         long number = 0;
         long tmp = n;
-        int m = 0;
         //find m
-        m = countNumber(n);
+        int m = countNumber(n);
         //count number = a^m + b^m +....
         while(tmp!=0){
             long mod = tmp%10;
