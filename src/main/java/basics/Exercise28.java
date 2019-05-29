@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise28 {
 
     public double sqrt(double n){

@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise24 {
 
     public int checkFibonacci(int n) {

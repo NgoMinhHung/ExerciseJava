@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise20 {
     public long sumFirtsNumbersOfFibonacci(int n){
         long result = 2;
