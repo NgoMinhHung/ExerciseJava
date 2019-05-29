@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise6 {
     public String solveQuadraticEquation(int a, int b, int c){
         String s = "";

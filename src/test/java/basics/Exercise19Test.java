@@ -1,3 +1,6 @@
+package basics;
+
+import basics.Exercise19;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

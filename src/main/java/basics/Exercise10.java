@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise10 {
     public double calculatePi(){
         double condition, result = 3;

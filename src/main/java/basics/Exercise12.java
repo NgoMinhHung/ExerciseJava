@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise12 {
     public  double calculateExpresstion(int n){
         double result = 1;

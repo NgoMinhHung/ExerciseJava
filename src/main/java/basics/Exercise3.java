@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise3 {
     public String analysisOfPrimeNumber(int n){
         int i;

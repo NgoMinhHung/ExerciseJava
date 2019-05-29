@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise7 {
     public long sumNumberSequense(int n){
         long sum = 0;

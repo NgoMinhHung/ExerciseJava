@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise11 {
     public double calculateInterest(int n){
         double result = 100;

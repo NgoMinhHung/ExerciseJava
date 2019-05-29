@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise4 {
     public String analysisOfPrimeNumberShort(int n){
         StringBuilder result = new StringBuilder();

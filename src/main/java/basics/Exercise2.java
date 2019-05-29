@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise2 {
     public int calculateSumOfDigits(int x){
         int sum = 0;
