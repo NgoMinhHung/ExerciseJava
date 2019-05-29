@@ -8,13 +8,12 @@ public class Exercise24 {
         if (n < 1){
             return 0;
         }
-            while (currentValue <= n) {
+        while (currentValue <= n) {
                 result++;
                 int tmp = previousValue + currentValue;
                 previousValue = currentValue;
                 currentValue = tmp;
-
-            }
+        }
 
         return result;
     }
