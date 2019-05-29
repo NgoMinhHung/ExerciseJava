@@ -12,9 +12,8 @@ public class Exercise25 {
         arrayList.add(currentValue);
 
         while (previousValue + currentValue <= n) {
-            int tmp;
             arrayList.add(previousValue + currentValue);
-            tmp = currentValue;
+            int tmp = currentValue;
             currentValue = previousValue + currentValue;
             previousValue = tmp;
         }
