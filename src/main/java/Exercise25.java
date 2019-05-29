@@ -4,23 +4,18 @@ public class Exercise25 {
 
     public static int checkFibonacci(int n, int m) {
 
-        ArrayList<Integer> arrayList = new ArrayList<>();
         int previousValue = 1;
         int currentValue = 1;
+        int result = 0;
 
-        arrayList.add(previousValue);
-        arrayList.add(currentValue);
-
-        while (previousValue + currentValue <= n) {
-            arrayList.add(previousValue + currentValue);
-            int tmp = currentValue;
-            currentValue = previousValue + currentValue;
-            previousValue = tmp;
+        while (previousValue <= n) {
+            if(previousValue >= m){
+                result ++;
+            }
+            int tmp = previousValue;
+            previousValue = currentValue;
+            currentValue = tmp + currentValue;
         }
-        while(arrayList.get(0) < m){
-            arrayList.remove(0);
-        }
-
-        return arrayList.size();
+        return result;
     }
 }
