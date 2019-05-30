@@ -1,8 +1,7 @@
-import org.junit.Test;
+package basics;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
+import basics.Exercise26;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
