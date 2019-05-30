@@ -22,7 +22,7 @@ public class Exercise16 {
         if (a == b || a == c || b == c) {
             return "La tam giac can";
         }
-        if (a * a == (b * b + c * c) || (b * b == (a * a + c * c)) || (c * c == (a * a + b * b))) {
+        if ((a * a - (b * b + c * c)) * ((b * b - (a * a + c * c))) * ((c * c - (a * a + b * b))) == 0) {
             return "La tam giac vuong";
         }
         return "La tam giac thuong";
