@@ -2,23 +2,49 @@ package basics;
 
 public class Exercise16 {
 
-    public String checkTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
-        String result = "";
-        int a = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
-        int b = (x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3);
-        int c = (x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3);
+    public double getEdge(double x1, double y1, double x2, double y2) {
+        double ex = x1 - x2;
+        double ey = y1 - y2;
+        return Math.sqrt(ex * ex + ey * ey);
+    }
 
-        if (Math.sqrt(a) < Math.sqrt(c) + Math.sqrt(b) && Math.sqrt(c) < Math.sqrt(a) + Math.sqrt(b) && Math.sqrt(b) < Math.sqrt(a) + Math.sqrt(c)) {
-            if (a == b + c || b == a + c || c == b + a) {
-                result += "La tam giac vuong";
-            } else if (a == b || a == c || b == c) {
-                if (a == b && b == c) result += "La tam giac deu";
-                else result += "La tam giac can";
-            } else {
-                result += "La tam giac thuong";
-            }
-            result += "\nChu vi: " + (Math.sqrt(a) + Math.sqrt(b) + Math.sqrt(c));
-        } else return "3 canh khong hop le";
-        return result;
+    public boolean checkTriangle(double a, double b, double c) {
+        return (a + b > c);
+    }
+
+    public String findTypeOfTriangle(double a, double b, double c) {
+        if (!checkTriangle(a, b, c)) {
+            return "Khong phai tam giac";
+        }
+        if (a == b && a == c) {
+            return "La tam giac deu";
+        }
+        if (a == b || a == c || b == c) {
+            return "La tam giac can";
+        }
+        if (a * a == (b * b + c * c) || (b * b == (a * a + c * c)) || (c * c == (a * a + b * b))) {
+            return "La tam giac vuong";
+        }
+        return "La tam giac thuong";
+    }
+
+    public double getPerimeter(double a, double b, double c) {
+        return a + b + c;
+    }
+
+    public double getAcreage(double a, double b, double c) {
+        double p = (a + b + c) / 2;
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+    }
+
+    public String getParameterOfTriagle(double x1, double y1, double x2, double y2, double x3, double y3) {
+
+        double a = getEdge(x1, y1, x2, y2);
+        double b = getEdge(x1, y1, x3, y3);
+        double c = getEdge(x2, y2, x3, y3);
+
+        if (checkTriangle(a, b, c)) {
+            return findTypeOfTriangle(a, b, c) + "\nChu vi: " + getPerimeter(a, b, c) + "\nDien tich: " + getAcreage(a, b, c);
+        } else return findTypeOfTriangle(a, b, c);
     }
 }
