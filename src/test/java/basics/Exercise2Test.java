@@ -1,6 +1,6 @@
 package basics;
 
-import basics.Exercise2;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -8,6 +8,6 @@ import static org.junit.Assert.assertEquals;
 public class Exercise2Test {
     @Test
     public void Test_calculateSumOfDigits(){
-        assertEquals(new Exercise2().calculateSumOfDigits(1234), 10);
+        Assert.assertEquals(new Exercise2().calculateSumOfDigits(1234), 10);
     }
 }

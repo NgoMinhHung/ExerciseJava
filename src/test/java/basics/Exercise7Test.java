@@ -1,6 +1,5 @@
 package basics;
 
-import basics.Exercise7;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
