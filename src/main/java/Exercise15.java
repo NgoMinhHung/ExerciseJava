@@ -11,10 +11,10 @@ public class Exercise15 {
         if (a == b && a == c) {
             return "La tam giac deu";
         }
-        if (a == b || a == c || b == c) {
+        if ((a - b) * (a - c) * (b - c) == 0) {
             return "La tam giac can";
         }
-        if (a * a == (b * b + c * c) || (b * b == (a * a + c * c)) || (c * c == (a * a + b * b))) {
+        if ((a * a - (b * b + c * c)) * (b * b - (a * a + c * c)) * (c * c - (a * a + b * b)) == 0) {
             return "La tam giac vuong";
         }
         return "La tam giac thuong";
@@ -33,6 +33,6 @@ public class Exercise15 {
 
         if (checkTriangle(a, b, c)) {
             return findTypeOfTriangle(a, b, c) + "\nChu vi: " + getPerimeter(a, b, c) + "\nDien tich: " + getAcreage(a, b, c);
-        }else return findTypeOfTriangle(a, b, c);
+        } else return findTypeOfTriangle(a, b, c);
     }
 }
