@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Array1 {
 
-    public List<Integer> getDuplicateElements(int[] arr, ArrayList<Integer> arrayList) {
+    public List<Integer> getDuplicateElements(int[] arr) {
         ArrayList<Integer> resultArray = new ArrayList<>();
 
         int current = arr[0];
