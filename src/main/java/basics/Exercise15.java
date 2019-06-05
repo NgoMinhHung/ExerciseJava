@@ -1,3 +1,5 @@
+package basics;
+
 public class Exercise15 {
 
     public boolean checkTriangle(double a, double b, double c) {
