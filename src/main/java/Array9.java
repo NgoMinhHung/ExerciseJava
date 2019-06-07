@@ -2,20 +2,28 @@ import java.util.Arrays;
 
 public class Array9 {
 
-    public int binarySearch(int arr[], int l, int r, int x) {
-        Arrays.sort(arr);
-        if (r >= l) {
-            int mid = l + (r - l) / 2;
+    public int binarySearch(int[] arr, int x) {
+        int result = -1;
+        int l = 0;
+        int r = arr.length;
 
-            if (arr[mid] == x)
-                return mid;
+        if (x < arr[l]) return result;
+        if (x > arr[r - 1]) return result;
+        if (arr != null) {
+            while (r >= l) {
+                int mid = l + (r - l) / 2;
 
-            if (arr[mid] > x)
-                return binarySearch(arr, l, mid - 1, x);
+                if (arr[mid] == x) {
+                    result = mid;
+                }
 
-            return binarySearch(arr, mid + 1, r, x);
+                if (arr[mid] > x) {
+                    r = mid - 1;
+                } else {
+                    l = mid + 1;
+                }
+            }
         }
-
-        return -1;
+        return result;
     }
 }
