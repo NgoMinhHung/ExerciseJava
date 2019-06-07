@@ -7,9 +7,10 @@ public class Array9 {
         int l = 0;
         int r = arr.length;
 
+        if (arr.length  == 0) return result;
         if (x < arr[l]) return result;
         if (x > arr[r - 1]) return result;
-        if (arr != null) {
+
             while (r >= l) {
                 int mid = l + (r - l) / 2;
 
@@ -23,7 +24,7 @@ public class Array9 {
                     l = mid + 1;
                 }
             }
-        }
+
         return result;
     }
 }
