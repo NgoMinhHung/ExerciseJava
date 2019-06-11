@@ -1,3 +1,6 @@
+import java.util.Arrays;
+
+
 public class Array6 {
 
     public int[] sortArray(int[] arr) {
@@ -6,17 +9,13 @@ public class Array6 {
             if (arr[i] % 2 == 0) {
                 for (int j = i + 1; j < arr.length; j++) {
                     if (arr[j] % 2 == 0 && arr[i] > arr[j]) {
-                        int temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
+                        arr[i] += (arr[j] - (arr[j] = arr[i]));
                     }
                 }
             } else {
                 for (int j = i + 1; j < arr.length; j++) {
                     if (arr[j] % 2 != 0 && arr[i] < arr[j]) {
-                        int temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
+                        arr[i] += (arr[j] - (arr[j] = arr[i]));
                     }
                 }
             }
