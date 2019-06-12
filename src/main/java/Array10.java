@@ -2,30 +2,30 @@ import java.util.ArrayList;
 
 public class Array10 {
 
-    public ArrayList<ArrayList<Integer>> devideEquallyElements(int n, int[] arr) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+    public int[][] devideEquallyElements(int n, int[] arr) {
 
-        if (arr.length == 0) return result;
+        int lengthArr = arr.length;
+
+        // tinh toan do dai moi mang con
+        int chunkSize = lengthArr / n;
+        chunkSize += lengthArr % n != 0 ? 1 : 0;
+
+        int[][] result = new int[n][chunkSize];
+
+        if (arr.length == 0) return null;
         if (n > arr.length) {
-            return result;
+            return null;
         } else {
-            int lengthArr = arr.length;
-
-            // tinh toan do dai moi mang con
-            int chunkSize = lengthArr / n;
-            chunkSize += lengthArr % n != 0 ? 1 : 0;
-
-            for(int i = 0; i < lengthArr; i+=chunkSize) {
+//            int countArr = 0;
+            for(int i = 0; i < n; i++) {
                 // sau do minh lay tu cac phan tu tu i -> i+chunkSize
-                ArrayList<Integer> splitList = new ArrayList<Integer>();
-                for (int j = i; j < i + chunkSize && j < lengthArr; j++) {
-                    splitList.add(arr[j]);
+
+                for (int j = 0; j < chunkSize && chunkSize * i + j < lengthArr; j++) {
+//                    countArr++;
+                    result[i][j] = arr[chunkSize * i + j];
                 }
-                // push split list to result
-                result.add(splitList);
             }
         }
-        System.out.println(result);
         return result;
     }
 }
