@@ -4,38 +4,35 @@ import java.util.LinkedHashMap;
 
 public class Array7 {
 
-    public int getPositionElementMaximum(int[] arr) {
-
-        int result = 0;
-        int Max = arr[0];
-
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] > Max) {
-                Max = arr[i];
-                result = i;
-            }
-        }
-        return result;
-    }
-
     public ArrayList<Integer> getLongestArrayOfChildren(int[] arr) {
 
-        ArrayList<Integer> result = new ArrayList<>();
-        int[] arrayOfChildren = new int[arr.length]; // Mang luu do dai mang con tu vi tri i
-        int[] lastPosition = new int[arr.length];   // Mang luu vi tri cuoi cua mang con tuong ung vi tri i
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        int arrayChunkSize = 0; // luu do dai mang con lien tiep
+        int firstPosition = 0;  // luu vi tri dau cua mang con lien tiep
+        int currentLength = 0; //luu do dai mang con hien tai
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (arr[j] <= arr[j + 1] && arrayOfChildren[j + 1] < arrayOfChildren[j] + 1) {
-                    arrayOfChildren[j] = arrayOfChildren[j] + 1;
-                    lastPosition[i] = j;
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > arr[i - 1]) {
+                currentLength++;
+            } else {
+                if (arrayChunkSize < currentLength) {
+                    arrayChunkSize = currentLength;
+                    firstPosition = i - arrayChunkSize;
                 }
+                currentLength = 0;
             }
         }
-        int positionArrayLongest = getPositionElementMaximum(arrayOfChildren);
-        for (int i = lastPosition[positionArrayLongest]; i <= arrayOfChildren[positionArrayLongest]; i++) {
+
+        if (arrayChunkSize < currentLength) {
+            arrayChunkSize = currentLength;
+            firstPosition = arr.length - arrayChunkSize;
+        }
+
+        for (int i = firstPosition - 1; i < arrayChunkSize + firstPosition; i++) {
             result.add(arr[i]);
         }
+
         return result;
     }
 }
