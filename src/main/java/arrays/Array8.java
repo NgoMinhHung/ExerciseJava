@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array8 {
 
     public long getMaximumDifferenceAndSmallestNumber(long[] arr) {

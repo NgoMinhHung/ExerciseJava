@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array3 {
 
     public long sumEvenMinusOddNumbers(long[] arr){

@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array5 {
 
     public boolean isPrime(long n) {
