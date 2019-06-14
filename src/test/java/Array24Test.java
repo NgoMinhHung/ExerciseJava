@@ -9,4 +9,8 @@ public class Array24Test {
         assertEquals(new Array24().getLeastCommonMultiple(new int[]{5,10,15,20}),60);
         assertEquals(new Array24().getLeastCommonMultiple(new int[]{15,30,12,10}),60);
     }
+    @Test
+    public void Test_getGreatestCommonDivisor(){
+        assertEquals(new Array24().getGreatestCommonDivisor(0, 5),5);
+    }
 }
