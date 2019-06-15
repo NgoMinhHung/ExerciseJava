@@ -1,3 +1,6 @@
+package arrays;
+
+import arrays.Array27;
 import org.junit.Test;
 
 import java.util.ArrayList;

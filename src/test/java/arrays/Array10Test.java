@@ -1,7 +1,7 @@
-import org.junit.Test;
+package arrays;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import arrays.Array10;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
