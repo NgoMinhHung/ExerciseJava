@@ -1,13 +1,13 @@
 public class Array20 {
 
-    public int[][] getSubArray(int row, int column, int[][] arr, int x,int y, int b, int n){
+    public int[][] getSubArray(int[][] arr, int startRow,int startCol, int rowCount, int colCount){
 
-        int[][] result = new int[b][n];
+        int[][] result = new int[rowCount][colCount];
         int r = 0, c = 0;
 
-        if (x + n <= column  && y + b <= row ){
-            for (int i = y; i < y + b; i++){
-                for (int j = y; j < x + n; j++){
+        if (startRow + colCount <= arr[0].length  && startCol + rowCount <= arr.length ){
+            for (int i = startCol; i < startCol + rowCount; i++){
+                for (int j = startCol; j < startRow + colCount; j++){
                     result[r][c++] = arr[i][j];
                 }
                 c = 0;
