@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class Array6 {
 
-    public static void swap(Integer[] arr, Integer pos1, Integer pos2){
+    public static void swap(Integer[] arr, int pos1, int pos2){
         Integer temp = arr[pos1];
         arr[pos1] = arr[pos2];
         arr[pos2] = temp;
