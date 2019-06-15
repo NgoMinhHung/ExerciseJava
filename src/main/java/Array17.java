@@ -8,7 +8,7 @@ public class Array17 {
         int column = n;
         int value = 1;
 
-        while (startRow < row && startColumn < column) {
+        while ((startRow - row) + (startColumn - column) < 0) {
 
             for (int i = startColumn; i < column; i++) {
                 result[startRow][i] = value;
