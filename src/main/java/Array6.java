@@ -3,12 +3,12 @@ import java.util.Arrays;
 
 public class Array6 {
 
-    public static void swap(Integer[] arr, int pos1, int pos2){
-        Integer temp = arr[pos1];
+    public static void swap(int[] arr, int pos1, int pos2){
+        int temp = arr[pos1];
         arr[pos1] = arr[pos2];
         arr[pos2] = temp;
     }
-    public Integer[] sortArray(Integer[] arr) {
+    public int[] sortArray(int[] arr) {
 
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] % 2 == 0) {
