@@ -2,60 +2,69 @@ import java.util.Arrays;
 
 public class Array19 {
 
-    public int[] convertMatrixOneDimentionalArray(int n, int m, int[][] matrix) {
+    public int[] convertMatrixOneDimentionalArray(int[][] matrix) {
 
+        int n = matrix.length;
+        int m = matrix[0].length;
         int[] result = new int[n * m];
         int count = 0;
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                result[count] = matrix[i][j];
-                count++;
+        if (n * m != 0) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    result[count] = matrix[i][j];
+                    count++;
+                }
             }
+
         }
         return result;
     }
 
     public int[][] sortSpiralMatrix(int n, int m, int[][] matrix) {
 
-        int[] oneDimentionalArray = convertMatrixOneDimentionalArray(n, m, matrix);
-        Arrays.sort(oneDimentionalArray);
+
         int count = 0;
         int[][] result = new int[n][m];
 
         int startingRow = 0;
         int startingColumn = 0;
+        if (n * m != 0) {
+            int[] oneDimentionalArray = convertMatrixOneDimentionalArray(matrix);
+            Arrays.sort(oneDimentionalArray);
 
-        while (startingRow < n && startingColumn < m) {
-            if (startingRow < n) {
-                for (int i = startingColumn; i < m; i++) {
-                    result[startingRow][i] = oneDimentionalArray[count];
-                    count++;
+            while (startingRow < n && startingColumn < m) {
+                if (startingRow < n) {
+                    for (int i = startingColumn; i < m; i++) {
+                        result[startingRow][i] = oneDimentionalArray[count];
+                        count++;
+                    }
+                    startingRow++;
                 }
-                startingRow++;
-            }
-            if (startingColumn < m) {
-                for (int i = startingRow; i < n; i++) {
-                    result[i][m - 1] = oneDimentionalArray[count];
-                    count++;
+                if (startingColumn < m) {
+                    for (int i = startingRow; i < n; i++) {
+                        result[i][m - 1] = oneDimentionalArray[count];
+                        count++;
+                    }
+                    m--;
                 }
-                m--;
-            }
-            if (startingRow < n) {
-                for (int i = m - 1; i >= startingColumn; i--) {
-                    result[n - 1][i] = oneDimentionalArray[count];
-                    count++;
+                if (startingRow < n) {
+                    for (int i = m - 1; i >= startingColumn; i--) {
+                        result[n - 1][i] = oneDimentionalArray[count];
+                        count++;
+                    }
+                    n--;
                 }
-                n--;
-            }
-            if (startingColumn < m) {
-                for (int i = n - 1; i >= startingRow; i--) {
-                    result[i][startingColumn] = oneDimentionalArray[count];
-                    count++;
+                if (startingColumn < m) {
+                    for (int i = n - 1; i >= startingRow; i--) {
+                        result[i][startingColumn] = oneDimentionalArray[count];
+                        count++;
+                    }
+                    startingColumn++;
                 }
-                startingColumn++;
-            }
 
+            }
+        } else{
+            return result;
         }
         return result;
     }

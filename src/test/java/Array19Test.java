@@ -17,7 +17,7 @@ public class Array19Test {
     }
     @Test
     public void Test_convertMatrixOneDimentionalArray(){
-        assertArrayEquals(new Array19().convertMatrixOneDimentionalArray(2,3,new int[][]{{1,2,3},{4,5,6}}),new int[]{1,2,3,4,5,6});
+        assertArrayEquals(new Array19().convertMatrixOneDimentionalArray(new int[][]{{1,2,3},{4,5,6}}),new int[]{1,2,3,4,5,6});
     }
 
 }
