@@ -1,12 +1,14 @@
 public class Array21 {
 
-    public void getCofactor(int matrix[][], int temp[][], int p, int q, int n) {
-        int i = 0, j = 0;
+    public int[][] getCofactor(int matrix[][],  int row, int col) {
 
-        for (int row = 0; row < n; row++) {
-            for (int col = 0; col < n; col++) {
-                if (row != p && col != q) {
-                    temp[i][j++] = matrix[row][col];
+        int i = 0, j = 0;
+        int n = matrix.length;
+        int result[][] = new int[n][n];
+        for (int r = 0; r < n; r++) {
+            for (int c = 0; c < n; c++) {
+                if (r != row && c != col) {
+                    result[i][j++] = matrix[r][c];
                     if (j == n - 1) {
                         j = 0;
                         i++;
@@ -14,6 +16,7 @@ public class Array21 {
                 }
             }
         }
+        return result;
     }
 
     public int calculateDeterminant(int n, int[][] matrix) {
@@ -27,7 +30,7 @@ public class Array21 {
         int sign = 1;
 
         for (int i = 0; i < n; i++) {
-            getCofactor(matrix, temp, 0, i, n);
+            temp = getCofactor(matrix, 0, i);
             result += sign * matrix[0][i] * calculateDeterminant(n - 1, temp);
             sign = -sign;
         }
