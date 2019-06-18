@@ -27,17 +27,20 @@ public class Array19 {
         int startingColumn = 0;
 
         while (startingRow < n && startingColumn < m) {
-
-            for (int i = startingColumn; i < m; i++) {
-                result[startingRow][i] = oneDimentionalArray[count];
-                count++;
+            if (startingRow < n) {
+                for (int i = startingColumn; i < m; i++) {
+                    result[startingRow][i] = oneDimentionalArray[count];
+                    count++;
+                }
+                startingRow++;
             }
-            startingRow++;
-            for (int i = startingRow; i < n; i++) {
-                result[i][m - 1] = oneDimentionalArray[count];
-                count++;
+            if (startingColumn < m) {
+                for (int i = startingRow; i < n; i++) {
+                    result[i][m - 1] = oneDimentionalArray[count];
+                    count++;
+                }
+                m--;
             }
-            m--;
             if (startingRow < n) {
                 for (int i = m - 1; i >= startingColumn; i--) {
                     result[n - 1][i] = oneDimentionalArray[count];
@@ -45,8 +48,8 @@ public class Array19 {
                 }
                 n--;
             }
-            if (startingColumn < m){
-                for (int i = n-1; i >= startingRow; i--){
+            if (startingColumn < m) {
+                for (int i = n - 1; i >= startingRow; i--) {
                     result[i][startingColumn] = oneDimentionalArray[count];
                     count++;
                 }
