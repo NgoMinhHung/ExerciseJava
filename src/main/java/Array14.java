@@ -9,17 +9,20 @@ public class Array14 {
         int startingColumn = 0;
 
         while(startingRow < n && startingColumn < m){
-
-            // print first row
-            for (int i = startingColumn; i < m; i++){
-                result.add(arr[startingRow][i]);
+            if (startingRow < n) {
+                // print first row
+                for (int i = startingColumn; i < m; i++) {
+                    result.add(arr[startingRow][i]);
+                }
+                startingRow++;
             }
-            startingRow++;
-            //print last column
-            for (int i = startingRow; i < n; i++){
-                result.add(arr[i][m-1]);
+            if (startingColumn < m) {
+                //print last column
+                for (int i = startingRow; i < n; i++) {
+                    result.add(arr[i][m - 1]);
+                }
+                m--;
             }
-            m--;
             //print last row
             if (startingRow < n){
                 for (int i = m - 1; i >= startingColumn; i--){
