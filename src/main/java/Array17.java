@@ -9,20 +9,20 @@ public class Array17 {
         int value = 1;
 
         while ((startRow - row) + (startColumn - column) < 0) {
-            if (startRow < row) {
+
                 for (int i = startColumn; i < column; i++) {
                     result[startRow][i] = value;
                     value++;
                 }
                 startRow++;
-            }
-            if (startColumn < column) {
+
+
                 for (int i = startRow; i < row; i++) {
                     result[i][column - 1] = value;
                     value++;
                 }
                 column--;
-            }
+
             if (startRow < row) {
                 for (int i = column - 1; i >= startColumn; i--) {
                     result[row - 1][i] = value;
