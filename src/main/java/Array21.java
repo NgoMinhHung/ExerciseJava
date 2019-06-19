@@ -26,12 +26,12 @@ public class Array21 {
         if (n == 1)
             return matrix[0][0];
 
-        int temp[][] = new int[n][n];
+
         int sign = 1;
 
         for (int i = 0; i < n; i++) {
-            temp = getCofactor(matrix, 0, i);
-            result += sign * matrix[0][i] * calculateDeterminant(n - 1, temp);
+
+            result += sign * matrix[0][i] * calculateDeterminant(n - 1, getCofactor(matrix, 0, i));
             sign = -sign;
         }
 
