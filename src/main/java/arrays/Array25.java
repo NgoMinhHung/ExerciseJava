@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array25 {
 
     public int getGreatestCommonDivisor(int x, int y) {

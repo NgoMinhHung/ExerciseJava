@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array23 {
     public int greatestSum(int[] arr) {
         int maxSum = 0;

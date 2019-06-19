@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array26 {
 
     public int reverse(int a) {

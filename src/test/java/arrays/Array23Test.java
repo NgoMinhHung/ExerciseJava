@@ -1,3 +1,6 @@
+package arrays;
+
+import arrays.Array23;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
