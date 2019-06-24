@@ -1,33 +1,48 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class String5 {
 
-    public ArrayList<String> getDuplicateWords(String input){
+    public ArrayList<String> getWords(String inp) {
+        ArrayList<String> result = new ArrayList<>();
+        if (!inp.isEmpty()) {
+            String[] temp = inp.split("[\\s]+");
+            for (String word : temp) {
+                if (word.matches("[\\w]+")) {
+                    result.add(word);
+                }
+            }
+        }
+        return result;
+    }
+
+    public ArrayList<String> getDuplicateWords(String input) {
 
 
         ArrayList<String> result = new ArrayList<>();
-        if (!input.isEmpty()) {
-            String[] temp = input.split("[\\s!?.\n]+");
-            String current = temp[0];
+        ArrayList<String> words = getWords(input);
 
-            int count = 1;
+        if (words.size() < 2) return result;
+        Collections.sort(words);
 
-            for (int i = 1; i < temp.length; i++) {
-                if (temp[i] == current) {
-                    count++;
-                } else {
-                    if (count > 1) {
-                        result.add(current);
-                        count = 1;
-                    }
+        String current = words.get(0);
+        int count = 1;
 
-                    current = temp[i];
-                }
-
-                if (i == temp.length - 1 && count > 1) {
+        for (int i = 1; i < words.size(); i++) {
+            if (words.get(i).equals(current)) {
+                count++;
+            } else {
+                if (count > 1) {
                     result.add(current);
+                    count = 1;
                 }
+
+                current = words.get(i);
+            }
+
+            if (i == words.size() - 1 && count > 1) {
+                result.add(current);
             }
         }
         return result;
