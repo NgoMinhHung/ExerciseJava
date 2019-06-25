@@ -21,27 +21,26 @@ public class String11 {
         int number2 = Integer.parseInt(expression.nextToken());
 
         if (operator.equals("+")) {
-            result.append(number1 + number2);
+            return result.append(number1 + number2).toString();
         }
         if (operator.equals("-")) {
-            result.append(number1 - number2);
+            return result.append(number1 - number2).toString();
         }
         if (operator.equals("*")) {
-            result.append(number1 * number2);
+            return result.append(number1 * number2).toString();
         }
         if (operator.equals("/")) {
-            result.append(number1 / number2);
+            return result.append(number1 / number2).toString();
         }
         if (operator.equals("^")){
-            result.append(Math.pow(number1,number2));
+            return result.append(Math.pow(number1,number2)).toString();
         }
         if (operator.equals(">") && operator2.equals(">")){
-            result.append(number1 >> number2);
+            return result.append(number1 >> number2).toString();
+        }else if (operator.equals("<") && operator2.equals("<")) {
+                return result.append(number1 << number2).toString();
+        }else {
+            return "Error";
         }
-        if (operator.equals("<") && operator2.equals("<")){
-            result.append(number1 << number2);
-        }
-
-        return result.toString();
     }
 }

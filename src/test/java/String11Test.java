@@ -14,5 +14,7 @@ public class String11Test {
         assertEquals(new String11().calculateExpression("2^5"),"32.0");
         assertEquals(new String11().calculateExpression("10<<2"),"40");
         assertEquals(new String11().calculateExpression("40>>2"),"10");
+        assertEquals(new String11().calculateExpression("40><2"),"Error");
+        assertEquals(new String11().calculateExpression("40<>2"),"Error");
     }
 }
