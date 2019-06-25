@@ -11,10 +11,6 @@ public class String8 {
         String[] sentence = input.split("[.,?!]+");
         String[] signs = input.replaceAll("[^.,?!]+", " ").trim().split("[\\s]+");
 
-
-        for (String i : signs){
-            System.out.println(i);
-        }
         for (int i = 0; i < sentence.length; i++) {
 
             sentence[i] = sentence[i].trim().substring(0, 1).toUpperCase() + sentence[i].trim().substring(1).toLowerCase();
