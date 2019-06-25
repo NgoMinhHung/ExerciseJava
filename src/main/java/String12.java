@@ -7,18 +7,11 @@ public class String12 {
 
         StringBuilder result = new StringBuilder();
         char current = input.charAt(0);
-        int count = 1;
 
         for (int i = 1; i < input.length(); i++) {
-            if (input.charAt(i) == current) {
-                count++;
-            } else {
-                if (count > 1) {
-                    result.append(current);
-                    count = 1;
-                } else {
-                    result.append(current);
-                }
+
+            if (input.charAt(i) != current) {
+                result.append(current);
                 current = input.charAt(i);
             }
 
