@@ -21,17 +21,16 @@ public class String9 {
                 if (count > 1) {
                     result.append(current).append(count);
                     count = 1;
-                }else if (count == 1){
+                }else{
                     result.append(current);
                 }
-
                 current = input.charAt(i);
             }
 
             if (i == input.length() - 1) {
                 if (count > 1){
                     result.append(current).append(count);
-                } else if (count == 1) {
+                } else {
                     result.append(current);
                 }
             }
