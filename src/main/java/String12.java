@@ -22,7 +22,7 @@ public class String12 {
                 current = input.charAt(i);
             }
 
-            if (i == input.length() - 1 && count >= 1) {
+            if (i == input.length() - 1) {
                 result.append(current);
             }
         }
