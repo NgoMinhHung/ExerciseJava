@@ -19,7 +19,7 @@ public class String11 {
             operator2 = expression.nextToken();
         }
         int number2 = Integer.parseInt(expression.nextToken());
-        System.out.println(number1 +operator +operator2 + number2);
+
         if (operator.equals("+")) {
             result.append(number1 + number2);
         }
@@ -39,7 +39,6 @@ public class String11 {
             result.append(number1 >> number2);
         }
         if (operator.equals("<") && operator2.equals("<")){
-            int dic = number1 << number2;
             result.append(number1 << number2);
         }
 
