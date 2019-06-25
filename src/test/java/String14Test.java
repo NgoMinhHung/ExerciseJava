@@ -9,5 +9,6 @@ public class String14Test {
         assertEquals(new String14().isBarcode("8938505974194"),true);
         assertEquals(new String14().isBarcode("8938505974194324325"),false);
         assertEquals(new String14().isBarcode("89385059wab94"),false);
+        assertEquals(new String14().isBarcode("8938edsdsf5059wab94"),false);
     }
 }
