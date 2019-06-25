@@ -15,7 +15,6 @@ public class String14 {
                     sum += input.charAt(i) - '0';
                 }
             }
-
             return sum % 10 == 0;
         }
     }
