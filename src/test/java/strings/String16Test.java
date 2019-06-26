@@ -1,4 +1,7 @@
+package strings;
+
 import org.junit.Test;
+import strings.String16;
 
 import static junit.framework.TestCase.assertEquals;
 

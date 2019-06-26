@@ -1,3 +1,5 @@
+package strings;
+
 public class String14 {
 
     public boolean isBarcode(String input) {

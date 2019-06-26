@@ -1,3 +1,5 @@
+package strings;
+
 public class String10 {
     public String convert(String input) {
 

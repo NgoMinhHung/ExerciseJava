@@ -1,4 +1,7 @@
+package strings;
+
 import org.junit.Test;
+import strings.String4;
 
 import static org.junit.Assert.assertEquals;
 

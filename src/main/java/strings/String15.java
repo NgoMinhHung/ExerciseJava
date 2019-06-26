@@ -1,3 +1,5 @@
+package strings;
+
 public class String15 {
 
     public int getnumberVerify(String input) {

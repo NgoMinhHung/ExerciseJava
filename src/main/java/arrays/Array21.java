@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array21 {
 
     public int[][] getCofactor(int matrix[][],  int row, int col) {

@@ -1,3 +1,5 @@
+package strings;
+
 public class String7 {
 
     public int getIndexSubString(String input, String subString) {

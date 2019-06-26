@@ -1,4 +1,7 @@
+package strings;
+
 import org.junit.Test;
+import strings.String2;
 
 import java.util.ArrayList;
 import java.util.Arrays;

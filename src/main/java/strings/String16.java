@@ -1,3 +1,5 @@
+package strings;
+
 public class String16 {
     public String addString(String inp1, String inp2) {
 

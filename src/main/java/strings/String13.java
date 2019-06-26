@@ -1,3 +1,5 @@
+package strings;
+
 public class String13 {
 
     public boolean isEqualsubString(String inp1,String inp2){

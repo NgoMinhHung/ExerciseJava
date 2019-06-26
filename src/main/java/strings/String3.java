@@ -1,3 +1,5 @@
+package strings;
+
 public class String3 {
 
     public boolean isSymmetry(String input){

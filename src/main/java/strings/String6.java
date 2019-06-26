@@ -1,3 +1,5 @@
+package strings;
+
 public class String6 {
 
     public String convertString(String inp){
