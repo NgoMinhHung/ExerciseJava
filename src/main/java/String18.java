@@ -23,7 +23,7 @@ public class String18 {
 
         for (int i = number2.length() - 1; i >= 0; i--) {
 
-            String currentProduct = calculate(number1, number2.charAt(i)) + zero;
+            String currentProduct = addProduct(number1, number2.charAt(i)) + zero;
 
             result = add(result, currentProduct);
 
@@ -31,7 +31,7 @@ public class String18 {
 
         }
 
-        return isNegativeNumber(input1) && !isNegativeNumber(input2) || isNegativeNumber(input2) && !isNegativeNumber(input1) ? "-" + result : result;
+        return isNegativeNumber(input1) == isNegativeNumber(input2) ? result : "-" + result;
 
     }
 
@@ -64,7 +64,7 @@ public class String18 {
         return sum.toString();
     }
 
-    public String calculate(String input1, char input2) {
+    public String addProduct(String input1, char input2) {
 
         StringBuilder result = new StringBuilder();
 
