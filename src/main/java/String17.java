@@ -6,11 +6,15 @@ public class String17 {
             return "Number Error";
         }
 
-        if (inp1.length() == inp2.length() && inp1.charAt(0) < inp2.charAt(0)){
-            String temString = inp1;
-            inp1 = inp2;
-            inp2 = temString;
-            return "-" + subStringNumber(inp1,inp2);
+        if (inp1.length() == inp2.length()){
+            int i = 0;
+            while (i < inp1.length() && inp1.charAt(i) <= inp2.charAt(i) ){
+                if (inp1.charAt(i) < inp2.charAt(i)){
+                    return "-" + subStringNumber(inp2,inp1);
+                } else {
+                    i++;
+                }
+            }
         }
 
         while (inp1.length() != inp2.length()) {
