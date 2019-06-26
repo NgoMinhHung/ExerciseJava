@@ -15,5 +15,6 @@ public class String17Test {
         assertEquals(new String17().subStringNumber("234124","123321"),"110803");
         assertEquals(new String17().subStringNumber("123321","234124"),"-110803");
         assertEquals(new String17().subStringNumber("223321","234124"),"-010803");
+        assertEquals(new String17().subStringNumber("222222","222222"),"000000");
     }
 }
