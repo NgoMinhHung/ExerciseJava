@@ -1,3 +1,5 @@
+package strings;
+
 public class String8 {
 
     public String Standardized(String input){

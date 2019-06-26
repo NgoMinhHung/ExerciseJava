@@ -1,3 +1,5 @@
+package strings;
+
 public class String18 {
 
     public String multiply(String input1, String input2) {
