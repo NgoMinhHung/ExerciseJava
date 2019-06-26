@@ -6,17 +6,11 @@ public class String17 {
             return "Number Error";
         }
 
-        if (inp1.length() == inp2.length()){
-            int i = 0;
-            while (i < inp1.length() && inp1.charAt(i) <= inp2.charAt(i) ){
-                if (inp1.charAt(i) < inp2.charAt(i)){
-                    return "-" + subStringNumber(inp2,inp1);
-                } else {
-                    i++;
-                }
+        if (inp1.length() == inp2.length()) {
+            if (inp1.compareTo(inp2) < 0) {
+                return "-" + subStringNumber(inp2, inp1);
             }
         }
-
         while (inp1.length() != inp2.length()) {
 
             if (inp1.length() < inp2.length()) {
@@ -24,9 +18,7 @@ public class String17 {
             } else {
                 inp2 = "0" + inp2;
             }
-
         }
-
 
         StringBuilder result = new StringBuilder();
 
@@ -39,13 +31,12 @@ public class String17 {
             if (number1 < number2) {
 
                 sub = 10 + (number1 - number2) - temp;
-                if (i != 0){
+                if (i != 0) {
                     temp = 1;
-                    result.insert(0, sub);
                 } else {
                     sub *= -1;
-                    result.insert(0,sub);
                 }
+                result.insert(0, sub);
             } else {
                 sub = (number1 - number2) - temp;
                 temp = 0;
