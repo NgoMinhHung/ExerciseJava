@@ -1,24 +1,34 @@
 public class Array22 {
 
-    public int[][] deleteRowAndColumnOfMatrix(int n, int m, int[][] arr, int row, int column){
-        int[][] result = new int[n-1][m-1];
-        //delete row
-        for (int i = row - 1; i < n - 1; i++ ){
-            for (int j = 0; j < m; j++){
-                arr[i][j] = arr[i+1][j];
-            }
+    public int[][] deleteRowAndColumnOfMatrix(int[][] arr, int row, int column){
+        if (row > arr.length || column > arr[0].length) {
+            return null;
         }
-        //delete column
-        for (int i = 0; i < n; i++){
-            for (int j = column - 1; j < m - 1; j++){
-                arr[i][j] = arr[i][j+1];
+
+        int[][] result = new int[arr.length - 1][arr[0].length - 1];
+
+        int rowCount = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            int columnCount = 0;
+
+            if (i == row - 1) {
+                continue;
             }
-        }
-        for (int i = 0; i < n - 1; i++){
-            for (int j = 0; j < m - 1; j++){
-                result[i][j] = arr[i][j];
+
+            for (int k = 0; k < arr[0].length; k++) {
+
+                if (k == column - 1) {
+                    continue;
+                }
+
+                result[rowCount][columnCount] = arr[i][k];
+                columnCount++;
             }
+
+            rowCount++;
         }
+
         return result;
     }
 }
