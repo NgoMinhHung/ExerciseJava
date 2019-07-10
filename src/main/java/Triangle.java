@@ -26,9 +26,8 @@ public class Triangle {
         return Math.sqrt(ex * ex + ey * ey);
     }
 
-    public boolean isTriangle()
-    {
-        return a + b > c && b + c > a && c + a > b;
+    public boolean isTriangle() {
+        return a + b > c;
     }
 
     public String getType() {
@@ -40,7 +39,7 @@ public class Triangle {
             return "La tam giac deu";
         }
 
-        if (a == b || a == c || b == c) {
+        if ((a - b) * (a - c) * (b - c) == 0) {
             return "La tam giac can";
         }
 
