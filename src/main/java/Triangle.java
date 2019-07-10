@@ -26,23 +26,28 @@ public class Triangle {
         return Math.sqrt(ex * ex + ey * ey);
     }
 
-    public boolean checkTriangle() {
-        return (a + b > c);
+    public boolean isTriangle()
+    {
+        return a + b > c && b + c > a && c + a > b;
     }
 
     public String getType() {
-        if (!checkTriangle()) {
+        if (!isTriangle()) {
             return "Khong phai tam giac";
         }
+
         if (a == b && a == c) {
             return "La tam giac deu";
         }
+
         if (a == b || a == c || b == c) {
             return "La tam giac can";
         }
+
         if ((a * a - (b * b + c * c)) * ((b * b - (a * a + c * c))) * ((c * c - (a * a + b * b))) == 0) {
             return "La tam giac vuong";
         }
+
         return "La tam giac thuong";
     }
 

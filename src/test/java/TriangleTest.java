@@ -10,7 +10,7 @@ public class TriangleTest {
     }
     @Test
     public void Test_checkTriangle(){
-        assertTrue(new Triangle(0, 3, 0, 0, 4, 0).checkTriangle());
+        assertTrue(new Triangle(0, 3, 0, 0, 4, 0).isTriangle());
     }
     @Test
     public void Test_getPerimeter(){
@@ -27,5 +27,17 @@ public class TriangleTest {
         assertEquals(new Triangle(0,4,-3,0,3,0).getType(),"La tam giac can");
         assertEquals(new Triangle(0,3,0,0,0,4).getType(),"Khong phai tam giac");
         assertEquals(new Triangle(-3,3,0,0,4,6).getType(),"La tam giac thuong");
+    }
+    @Test
+    public void Test_getA(){
+        assertEquals(new Triangle(0,3,0,0,4,0).getA(),3,0.001);
+    }
+    @Test
+    public void Test_getB(){
+        assertEquals(new Triangle(0,3,0,0,4,0).getB(),5,0.001);
+    }
+    @Test
+    public void Test_getC(){
+        assertEquals(new Triangle(0,3,0,0,4,0).getC(),4,0.001);
     }
 }
