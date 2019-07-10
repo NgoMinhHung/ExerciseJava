@@ -1,7 +1,6 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TriangleTest {
     @Test
@@ -11,6 +10,7 @@ public class TriangleTest {
     @Test
     public void Test_checkTriangle(){
         assertTrue(new Triangle(0, 3, 0, 0, 4, 0).isTriangle());
+        assertFalse(new Triangle(0, 3, 0, 0, 0, 4).isTriangle());
     }
     @Test
     public void Test_getPerimeter(){
@@ -25,6 +25,8 @@ public class TriangleTest {
         assertEquals(new Triangle(0,3,0,0,4,0).getType(),"La tam giac vuong");
         assertEquals(new Triangle(-3, 0, 0, 3 * Math.sqrt(3), 3, 0).getType(),"La tam giac deu");
         assertEquals(new Triangle(0,4,-3,0,3,0).getType(),"La tam giac can");
+        assertEquals(new Triangle(0,4,3,0,-3,0).getType(),"La tam giac can");
+        assertEquals(new Triangle(3,0,-3,0,0,4).getType(),"La tam giac can");
         assertEquals(new Triangle(0,3,0,0,0,4).getType(),"Khong phai tam giac");
         assertEquals(new Triangle(-3,3,0,0,4,6).getType(),"La tam giac thuong");
     }
