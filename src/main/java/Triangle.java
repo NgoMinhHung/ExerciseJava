@@ -1,6 +1,23 @@
 public class Triangle {
-    public int x1, x2, x3, y1, y2, y3;
+    private double a, b, c;
 
+    public double getA() {
+        return a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
+        a = getEdge(x1, y1, x2, y2);
+        b = getEdge(x1, y1, x3, y3);
+        c = getEdge(x2, y2, x3, y3);
+    }
 
     public double getEdge(double x1, double y1, double x2, double y2) {
         double ex = x1 - x2;
@@ -9,12 +26,12 @@ public class Triangle {
         return Math.sqrt(ex * ex + ey * ey);
     }
 
-    public boolean checkTriangle(double a, double b, double c) {
+    public boolean checkTriangle() {
         return (a + b > c);
     }
 
-    public String findTypeOfTriangle(double a, double b, double c) {
-        if (!checkTriangle(a, b, c)) {
+    public String getType() {
+        if (!checkTriangle()) {
             return "Khong phai tam giac";
         }
         if (a == b && a == c) {
@@ -29,23 +46,13 @@ public class Triangle {
         return "La tam giac thuong";
     }
 
-    public double getPerimeter(double a, double b, double c) {
+    public double getPerimeter() {
         return a + b + c;
     }
 
-    public double getAcreage(double a, double b, double c) {
+    public double getArea() {
         double p = (a + b + c) / 2;
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
 
-    public String getParameterOfTriagle(double x1, double y1, double z1, double x2, double y2, double z2, double x3, double y3, double z3) {
-
-        double a = getEdge(x1, y1, z1, x2, y2, z2);
-        double b = getEdge(x1, y1, z1, x2, y2, z2);
-        double c = getEdge(x1, y1, z1, x2, y2, z2);
-
-        if (checkTriangle(a, b, c)) {
-            return findTypeOfTriangle(a, b, c) + "\nChu vi: " + getPerimeter(a, b, c) + "\nDien tich: " + getAcreage(a, b, c);
-        } else return findTypeOfTriangle(a, b, c);
-    }
 }
