@@ -1,3 +1,5 @@
+package OOP;
+
 public class Triangle {
     private double a, b, c;
 

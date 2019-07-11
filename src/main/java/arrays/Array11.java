@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array11 {
 
     public int[] getSubArray(int[] arr){

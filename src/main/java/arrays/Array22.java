@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array22 {
 
     public int[][] deleteRowAndColumnOfMatrix(int[][] arr, int row, int column){

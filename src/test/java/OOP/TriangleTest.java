@@ -1,3 +1,6 @@
+package OOP;
+
+import OOP.Triangle;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

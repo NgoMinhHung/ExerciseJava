@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array20 {
 
     public int[][] getSubArray(int[][] arr, int startRow, int startCol, int rowCount, int colCount) {

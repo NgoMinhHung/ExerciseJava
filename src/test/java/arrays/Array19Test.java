@@ -1,3 +1,6 @@
+package arrays;
+
+import arrays.Array19;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

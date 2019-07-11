@@ -1,3 +1,5 @@
+package strings;
+
 public class String17 {
 
     public String subStringNumber(String inp1, String inp2) {

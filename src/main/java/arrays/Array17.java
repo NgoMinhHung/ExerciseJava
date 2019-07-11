@@ -1,3 +1,5 @@
+package arrays;
+
 public class Array17 {
 
     public int[][] setSpiralArray(int n) {
