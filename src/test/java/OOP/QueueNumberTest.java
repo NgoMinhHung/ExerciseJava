@@ -1,3 +1,6 @@
+package OOP;
+
+import OOP.QueueNumber;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

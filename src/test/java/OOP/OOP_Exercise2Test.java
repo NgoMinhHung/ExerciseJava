@@ -1,6 +1,8 @@
-import OOP_Exercise2.Circle;
-import OOP_Exercise2.Quadrilateral;
-import OOP_Exercise2.Triangle;
+package OOP;
+
+import OOP.OOP_Exercise2.Circle;
+import OOP.OOP_Exercise2.Quadrilateral;
+import OOP.OOP_Exercise2.Triangle;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

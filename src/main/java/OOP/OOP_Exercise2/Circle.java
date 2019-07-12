@@ -1,4 +1,4 @@
-package OOP_Exercise2;
+package OOP.OOP_Exercise2;
 
 public class Circle implements Shape {
 
